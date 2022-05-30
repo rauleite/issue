@@ -1,0 +1,17 @@
+name = "api"
+compatibility_date = "2022-05-16"
+account_id = "1b5b99f85df2ff3830dfec7cb7cee2d9"
+workers_dev = true
+
+# Seems it's not working
+node_compat = true
+
+# --- STAGING ---
+[env.staging]
+  main = "dist/bundle.js"
+  [dev]
+    # ip = "192.168.0.103"
+    # @default `8787`
+
+[env.staging.build]
+  command = "pnpm run build"  

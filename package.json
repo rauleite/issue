@@ -11,7 +11,7 @@
     "format": "prettier --write '**/*.{js,css,json,md}'",
     "publish": "wrangler publish",
     "build": "webpack",
-    "dev": "./wrangler dev -e staging --local"
+    "dev": "wrangler dev -e staging --local"
   },
   "devDependencies": {
     "@types/node": "^17.0.0",

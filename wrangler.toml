@@ -2,8 +2,6 @@ name = "api"
 compatibility_date = "2022-05-16"
 account_id = "1b5b99f85df2ff3830dfec7cb7cee2d9"
 workers_dev = true
-
-# Seems it's not working
 node_compat = true
 
 # --- STAGING ---

@@ -6,7 +6,13 @@ module.exports = {
   mode: "development",
   devtool: 'cheap-module-source-map',
   entry: './src/index.ts',
+  /*
+    It throws with or without 'externals' and 'externalsPresets'
+  */
   externals: [
+    {
+      'cross-fetch': 'fetch',
+    },
     nodeExternals()
   ],
   externalsPresets: {
@@ -21,13 +27,12 @@ module.exports = {
       },
     ],
   },
-
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve('./', 'dist'),
   }
 }
 

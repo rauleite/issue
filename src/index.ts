@@ -2,14 +2,16 @@ import puppeteer from 'puppeteer-extra'
 import StealthPlugin from 'puppeteer-extra-plugin-stealth'
 
 /**
-Line with issue:
-  [plugin: checkForNodeBuiltins] Detected a Node builtin module import while Node compatibility is disabled.
-  Add node_compat = true to your wrangler.toml file to enable Node compatibility.
-PS. works only if comment this line
+The line that throws the error:
+
+    Error: Dynamic require of "kind-of" is not supported
+    at /tmp/tmp-6015-AjUkHS40r9RU/bundle.js:11:11 ...
+
+PS. works only if comment the line below
 */
 
+//@ts-ignore
 puppeteer.use(StealthPlugin())
-
 
 addEventListener("fetch", (event) => {
   //@ts-ignore
